@@ -20,14 +20,14 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--text);
   background: var(--bg);
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading);
-  font-family: 'Poppins', 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 700;
 }
 
@@ -313,7 +313,7 @@ h1 {
 
 .nav-logo {
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 1px;
@@ -449,7 +449,7 @@ h1 {
 
 .footer-logo {
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: 1px;
