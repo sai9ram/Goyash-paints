@@ -60,4 +60,60 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.addEventListener('DOMContentLoaded', () => {
   const animatedCards = document.querySelectorAll('.fade-in-card');
   animatedCards.forEach(card => observer.observe(card));
+
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-accordion-item');
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other accordions
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Start Testimonial auto rotation
+  startTestimonialAutoPlay();
 });
+
+// Testimonial Carousel
+let testimonialIndex = 0;
+let testimonialInterval;
+
+window.setSlide = function(index) {
+  const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+  const testimonialDots = document.querySelectorAll('.carousel-dots .dot');
+  if (testimonialSlides.length === 0) return;
+  
+  testimonialIndex = (index + testimonialSlides.length) % testimonialSlides.length;
+  
+  testimonialSlides.forEach((slide, idx) => {
+    slide.classList.toggle('active', idx === testimonialIndex);
+  });
+  
+  testimonialDots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === testimonialIndex);
+  });
+  
+  // Reset auto-play timer on manual interaction
+  startTestimonialAutoPlay();
+};
+
+function startTestimonialAutoPlay() {
+  clearInterval(testimonialInterval);
+  testimonialInterval = setInterval(() => {
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    if (testimonialSlides.length > 0) {
+      window.setSlide(testimonialIndex + 1);
+    }
+  }, 7000);
+}
