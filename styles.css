@@ -1290,12 +1290,18 @@ h1 {
 
 /* Bottom CTA Banner */
 .comparison-cta {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--dark-bg) 100%);
+  position: relative;
+  background: linear-gradient(135deg, rgba(11, 45, 92, 0.9) 0%, rgba(7, 27, 55, 0.95) 100%), url('Exterior Makeover  After.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
   border-radius: 24px;
   padding: 60px 48px;
   color: #ffffff;
   text-align: center;
   box-shadow: var(--shadow-hover);
+  overflow: hidden;
+  z-index: 1;
 }
 
 .comparison-cta h3 {
