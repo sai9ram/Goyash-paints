@@ -694,11 +694,27 @@ h1 {
 }
 
 .card-icon {
-  font-size: 2rem;
-  background: rgba(46, 139, 87, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(11, 45, 92, 0.08);
+  color: var(--primary);
   padding: 10px;
   border-radius: 12px;
-  line-height: 1;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.about-card:hover .card-icon {
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--secondary);
+}
+
+.icon-svg {
+  width: 100%;
+  height: 100%;
 }
 
 .about-card h3 {
