@@ -1919,181 +1919,185 @@ h1 {
 
 /* Dealer Network Section */
 .dealer-section {
+  padding: 120px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.dealer-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.dealer-grid-advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   max-width: 1200px;
-  margin: 80px auto;
-  border-radius: 32px;
-  background: linear-gradient(135deg, #0b2240 0%, #061324 100%);
-  color: #ffffff;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(6, 19, 36, 0.35);
+  margin: 0 auto 60px;
+  padding: 0 24px;
 }
 
-.dealer-glow-1, .dealer-glow-2 {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background: rgba(56, 189, 248, 0.05);
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: 1;
-  pointer-events: none;
-}
-.dealer-glow-1 { top: -150px; left: -150px; }
-.dealer-glow-2 { bottom: -150px; right: -150px; }
-
-.dealer-container {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
-  padding: 90px 80px;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-.blue-eyebrow {
-  color: #38bdf8;
-}
-
-.dealer-advantages-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.advantage-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+.dealer-adv-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 24px;
-  transition: all 0.3s ease;
+  padding: 30px 24px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
 }
 
-.advantage-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(56, 189, 248, 0.3);
-  transform: translateY(-3px);
+.dealer-adv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(46, 139, 87, 0.2);
 }
 
-.advantage-card-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
+.adv-icon-wrap {
+  width: 48px;
+  height: 48px;
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--secondary);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 12px;
 }
 
-.advantage-card-icon .icon-svg {
+.adv-icon-wrap .icon-svg {
   width: 100%;
   height: 100%;
 }
 
-.advantage-card h4 {
-  font-size: 1.05rem;
-  color: #ffffff;
+.dealer-adv-card h4 {
+  font-size: 1.15rem;
+  color: var(--primary);
   margin: 0 0 10px 0;
-  font-weight: 700;
+  font-weight: 800;
 }
 
-.advantage-card p {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.7);
+.dealer-adv-card p {
+  font-size: 0.85rem;
   line-height: 1.5;
+  color: var(--text);
   margin: 0;
 }
 
-.dealer-form-card {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 28px;
-  padding: 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  position: relative;
-  overflow: hidden;
+.dealer-action-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.form-badge {
-  display: inline-block;
-  background: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
+.dealer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.dealer-visual-panel {
+  position: relative;
+  height: 460px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--border);
+}
+
+.dealer-panel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dealer-visual-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(11, 45, 92, 0.85) 0%, rgba(7, 27, 55, 0.95) 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  z-index: 2;
+}
+
+.dealer-stat-item {
+  text-align: center;
+  color: white;
+}
+
+.stat-count {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--secondary);
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 8px;
+}
+
+.stat-lbl {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 4px 10px;
-  border-radius: 99px;
-  margin-bottom: 16px;
+}
+
+.dealer-form-card {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 48px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .dealer-form-card h3 {
-  font-size: 1.6rem;
-  color: #ffffff;
-  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0 0 10px 0;
   font-weight: 800;
 }
 
 .dealer-form-card p {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  color: var(--text);
   margin: 0 0 30px 0;
-  line-height: 1.4;
 }
 
 .dealer-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .form-group input {
   width: 100%;
   padding: 14px 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid var(--border);
   font-family: inherit;
   font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.02);
-  color: #ffffff;
-  transition: all 0.3s ease;
-}
-
-.form-group input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  background: var(--bg);
+  transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #38bdf8;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+  border-color: var(--secondary);
 }
 
 .btn-dealer {
   width: 100%;
   padding: 14px;
   font-size: 0.95rem;
-  background: #38bdf8;
-  color: #061324;
-  border: none;
-  border-radius: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-dealer:hover {
-  background: #0ea5e9;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
 }
 
 /* Testimonials Carousel Section */
@@ -2493,13 +2497,12 @@ h1 {
   .tech-step {
     width: 80%;
   }
-  .dealer-section {
-    margin: 60px 24px;
+  .dealer-grid-advantages {
+    grid-template-columns: repeat(2, 1fr);
   }
   .dealer-container {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 60px 40px;
   }
   .testimonial-slide {
     grid-template-columns: 1fr;
@@ -2522,21 +2525,18 @@ h1 {
   .sustainability-container {
     padding: 40px 20px;
   }
-  .dealer-section {
-    margin: 40px 16px;
-    border-radius: 24px;
-  }
-  .dealer-container {
-    padding: 40px 20px;
-  }
-  .dealer-advantages-grid {
-    grid-template-columns: 1fr;
-  }
-  .dealer-form-card {
-    padding: 30px 24px;
-  }
   .applications-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .dealer-grid-advantages {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .dealer-visual-panel {
+    height: 320px;
+  }
+  .dealer-form-card {
+    padding: 30px 20px;
   }
   .gallery-masonry {
     grid-template-columns: 1fr;
