@@ -1092,7 +1092,7 @@ h1 {
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
-  text-align: left;
+  text-align: center;
 }
 
 .comparison-table th, .comparison-table td {
