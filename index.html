@@ -11,14 +11,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Premium Navigation Header -->
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="#" class="nav-logo" aria-label="Goyash Paints Home">
+            <span class="logo-text">GOYASH</span> <span class="logo-sub">PAINTS</span>
+          </a>
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#comparison">Compare</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a href="#quote" class="btn-nav">Get a Quote</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <div class="page-shell">
-      <header class="hero">
+      <section class="hero" id="home">
         <div class="hero-content">
           <p class="eyebrow">Since 2005 • Premium Paint Solutions</p>
           <h1>Premium Paint Solutions for Beautiful &amp; Long-Lasting Spaces</h1>
@@ -49,7 +71,7 @@
           </div>
           <div class="slide-dots" aria-label="Image slider controls"></div>
         </div>
-      </header>
+      </section>
 
       <section class="trust-strip" aria-label="Brand trust points">
         <div class="trust-item">20+ Years Experience</div>
@@ -59,6 +81,67 @@
         <div class="trust-item">Dealer Network</div>
       </section>
     </div>
+
+    <!-- Premium Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col company-col">
+          <a href="#" class="footer-logo" aria-label="Goyash Paints Home">
+            <span class="logo-text">GOYASH</span> <span class="logo-sub">PAINTS</span>
+          </a>
+          <p class="footer-about">
+            Redefining spaces with premium quality, innovation, and eco-friendly paint solutions. Empowering beauty and durability since 2005.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-link"><span class="icon">FB</span></a>
+            <a href="#" aria-label="Instagram" class="social-link"><span class="icon">IG</span></a>
+            <a href="#" aria-label="LinkedIn" class="social-link"><span class="icon">LN</span></a>
+            <a href="#" aria-label="Twitter" class="social-link"><span class="icon">TW</span></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#products">Interior Paints</a></li>
+            <li><a href="#products">Exterior Paints</a></li>
+            <li><a href="#products">Wood &amp; Metal Care</a></li>
+            <li><a href="#products">Waterproofing</a></li>
+            <li><a href="#products">Primers &amp; Undercoats</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#gallery">Project Gallery</a></li>
+            <li><a href="#comparison">Product Comparison</a></li>
+            <li><a href="#dealer">Dealer Registration</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col contact-col">
+          <h3>Contact Us</h3>
+          <p class="contact-info">📍 123 Paint Avenue, Color City</p>
+          <p class="contact-info">📞 +1 (555) 019-2834</p>
+          <p class="contact-info">✉️ info@goyashpaints.com</p>
+          
+          <div class="newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+              <input type="email" placeholder="Your email address" required aria-label="Email address" />
+              <button type="submit" aria-label="Subscribe">→</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Goyash Paints. All rights reserved. | Built for premium performance.</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
