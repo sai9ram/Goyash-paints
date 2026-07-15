@@ -41,25 +41,23 @@ startAutoPlay();
 window.addEventListener('mouseenter', () => clearInterval(intervalId));
 window.addEventListener('mouseleave', startAutoPlay);
 
-// Scroll Reveal Observer
-const revealElements = document.querySelectorAll('.scroll-reveal');
+// Intersection Observer for scroll animations
+const observerOptions = {
+  root: null,
+  threshold: 0.15,
+  rootMargin: '0px 0px -50px 0px'
+};
 
-const revealObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry, index) => {
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Add a slight stagger delay if multiple elements are intersecting at the same time
-      setTimeout(() => {
-        entry.target.classList.add('active');
-      }, index * 150);
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, {
-  threshold: 0.15,
-  rootMargin: '0px 0px -50px 0px'
-});
+}, observerOptions);
 
-revealElements.forEach(element => {
-  revealObserver.observe(element);
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedCards = document.querySelectorAll('.fade-in-card');
+  animatedCards.forEach(card => observer.observe(card));
 });
-
