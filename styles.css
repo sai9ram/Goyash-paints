@@ -1368,3 +1368,188 @@ h1 {
   }
 }
 
+/* Painting Process Section */
+.process-section {
+  padding: 120px 0;
+  border-top: 1px solid var(--border);
+}
+
+.process-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.process-header .section-description {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-top: 20px;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.timeline-step {
+  background: var(--surface);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  padding: 40px 30px;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.timeline-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(46, 139, 87, 0.2);
+}
+
+.step-badge {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(11, 45, 92, 0.05);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
+}
+
+.step-icon-container {
+  width: 54px;
+  height: 54px;
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--secondary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-step:hover .step-icon-container {
+  transform: scale(1.08);
+}
+
+.timeline-step h3 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.recommend-product-badge {
+  align-self: flex-start;
+  background: rgba(11, 45, 92, 0.06);
+  color: var(--primary);
+  font-size: 0.76rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(11, 45, 92, 0.1);
+}
+
+.recommend-product-badge strong {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* System Benefits Card */
+.system-benefits {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 48px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.benefits-title {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-weight: 800;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.benefit-card h4 {
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.benefit-card p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: 80px 0;
+  }
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .system-benefits {
+    padding: 30px 24px;
+  }
+}
+
+
