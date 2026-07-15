@@ -734,7 +734,8 @@ h1 {
 
 .about-card h3 {
   margin: 0 0 8px 0;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 .about-card p {
@@ -918,9 +919,10 @@ h1 {
 }
 
 .promise-content h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ffffff;
   margin: 0 0 10px 0;
+  font-weight: 700;
 }
 
 .promise-content p {
@@ -1042,7 +1044,7 @@ h1 {
 }
 
 .product-content h3 {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   margin: 6px 0 10px 0;
   color: var(--primary);
   font-weight: 800;
