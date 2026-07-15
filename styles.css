@@ -1037,10 +1037,12 @@ h1 {
 
 .category-name {
   color: var(--secondary);
-  font-size: 0.82rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .product-content h3 {
