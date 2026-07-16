@@ -334,11 +334,13 @@ h1 {
 }
 
 .footer-logo-img {
-  height: 60px;
+  height: 85px;
   width: auto;
-  max-width: 200px;
+  max-width: 250px;
   object-fit: contain;
   margin-bottom: 20px;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .nav-menu {
