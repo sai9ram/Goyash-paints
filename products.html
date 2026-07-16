@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Catalogue | Goyash Paints</title>
+    <meta
+      name="description"
+      content="Explore the premium range of Goyash Paints interior, exterior, primer, and surface protection products designed for homes, commercial and industrial spaces."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpeg" href="favicon.jpeg" />
+  </head>
+  <body>
+    <!-- Premium Navigation Header -->
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo" aria-label="Goyash Paints Home">
+            <img src="original-logo.jpeg" alt="Goyash Paints Logo" class="logo-img" />
+          </a>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="index.html#gallery">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a href="index.html#quote" class="btn-nav">Get a Quote</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page-shell">
+      <!-- Section 1 — Hero Banner -->
+      <section class="products-hero" id="products-hero">
+        <a href="index.html" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Home
+        </a>
+
+        <div class="products-hero-content">
+          <p class="eyebrow">Our Catalogue</p>
+          <h1>Premium Paint Solutions for Every Surface</h1>
+          <p class="hero-copy">
+            From elegant, washability interior emulsions to extreme weather-resistant outer coatings and high-adhesion primers, explore Goyash Paints' professional catalogue engineered to make walls stand out.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2 — Filterable Product Grid -->
+      <section class="catalog-section" id="catalog" aria-label="Product Catalogue">
+        <!-- Interactive Category Filters -->
+        <div class="catalog-filters">
+          <button class="filter-btn active" data-filter="all">All Products</button>
+          <button class="filter-btn" data-filter="interior">Interior Emulsions</button>
+          <button class="filter-btn" data-filter="exterior">Exterior Coatings</button>
+          <button class="filter-btn" data-filter="primer">Wall Primers</button>
+        </div>
+
+        <div class="catalog-grid">
+          <!-- Card 1 - Goyash Smart -->
+          <div class="catalog-item fade-in-card" data-category="interior" style="--card-index: 1;">
+            <div class="catalog-visual">
+              <img src="Hero image.jpeg" alt="Goyash Smart Premium Interior Emulsion" />
+              <span class="catalog-badge">Interior Emulsion</span>
+            </div>
+            <div class="catalog-content">
+              <h3>GOYASH SMART</h3>
+              <p class="catalog-tagline">Smart Choice for Beautiful Interiors.</p>
+              <p class="catalog-desc">
+                An eco-friendly, premium interior wall emulsion providing a clean washability rating, excellent light dispersion, and a smooth luxury matte appearance.
+              </p>
+              <ul class="catalog-features">
+                <li><strong>Finish:</strong> Rich Smooth Matte</li>
+                <li><strong>Washability:</strong> Highly Washable</li>
+                <li><strong>Coverage:</strong> 130 - 150 sq.ft/litre/2 coats</li>
+                <li><strong>Dilution:</strong> 40% with clean water</li>
+              </ul>
+              <a href="index.html#quote" class="btn btn-primary">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- Card 2 - Goyash Veloura -->
+          <div class="catalog-item fade-in-card" data-category="interior" style="--card-index: 2;">
+            <div class="catalog-visual">
+              <img src="Hero image 3.jpeg" alt="Goyash Veloura Luxury Interior Emulsion" />
+              <span class="catalog-badge">Luxury Interior</span>
+            </div>
+            <div class="catalog-content">
+              <h3>GOYASH VELOURA</h3>
+              <p class="catalog-tagline">Luxury Finish &amp; Stain Resistance.</p>
+              <p class="catalog-desc">
+                Formulated for luxury homes and villas, Veloura features advanced cross-linking polymer technology for high stain guard, dust repellency, and smooth velvet aesthetics.
+              </p>
+              <ul class="catalog-features">
+                <li><strong>Finish:</strong> High-Sheen Velvet Matte</li>
+                <li><strong>Washability:</strong> Premium Washable</li>
+                <li><strong>Coverage:</strong> 140 - 160 sq.ft/litre/2 coats</li>
+                <li><strong>Dilution:</strong> 35% with clean water</li>
+              </ul>
+              <a href="index.html#quote" class="btn btn-primary">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- Card 3 - Goyash Imperio -->
+          <div class="catalog-item fade-in-card" data-category="exterior" style="--card-index: 3;">
+            <div class="catalog-visual">
+              <img src="Hero Image1.jpeg" alt="Goyash Imperio Premium Exterior Emulsion" />
+              <span class="catalog-badge">Exterior Protection</span>
+            </div>
+            <div class="catalog-content">
+              <h3>GOYASH IMPERIO</h3>
+              <p class="catalog-tagline">Ultimate Weather Protection.</p>
+              <p class="catalog-desc">
+                An advanced silicone-grafted exterior coating designed to withstand extreme UV radiation, monsoon humidity, algae attacks, and environmental carbonization.
+              </p>
+              <ul class="catalog-features">
+                <li><strong>Finish:</strong> Rich Smooth Semi-Sheen</li>
+                <li><strong>Weather Shield:</strong> Active Anti-Algae Coating</li>
+                <li><strong>Coverage:</strong> 55 - 65 sq.ft/litre/2 coats</li>
+                <li><strong>Dilution:</strong> 40% with clean water</li>
+              </ul>
+              <a href="index.html#quote" class="btn btn-primary">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- Card 4 - Goyash Primer -->
+          <div class="catalog-item fade-in-card" data-category="primer" style="--card-index: 4;">
+            <div class="catalog-visual">
+              <img src="Hero image 2.jpeg" alt="Goyash Primer Premium Wall Primer" />
+              <span class="catalog-badge">Wall Primer</span>
+            </div>
+            <div class="catalog-content">
+              <h3>GOYASH PRIMER</h3>
+              <p class="catalog-tagline">The Perfect Foundation.</p>
+              <p class="catalog-desc">
+                A high-grip, water-based undercoat that penetrates porous plasters to neutralize masonry alkalinity and seal the surface, increasing topcoat coverage by 20%.
+              </p>
+              <ul class="catalog-features">
+                <li><strong>Finish:</strong> High Opacity Undercoat</li>
+                <li><strong>Adhesion:</strong> Superb Grip &amp; Bonding</li>
+                <li><strong>Coverage:</strong> 100 - 120 sq.ft/litre/single coat</li>
+                <li><strong>Dilution:</strong> 50% with clean water</li>
+              </ul>
+              <a href="index.html#quote" class="btn btn-primary">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 — Detailed Comparison Table -->
+      <section class="comparison-catalog-section" id="detailed-compare" aria-label="Compare Products">
+        <div class="different-header">
+          <p class="section-eyebrow">Product Comparison</p>
+          <h2 class="section-title">Detailed Features Matrix</h2>
+          <p class="section-description">
+            Compare our key paint products side-by-side to determine which is the perfect solution for your surface.
+          </p>
+        </div>
+
+        <div class="comparison-table-container fade-in-card" style="--card-index: 1;">
+          <div class="table-responsive">
+            <table class="detailed-comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>GOYASH SMART</th>
+                  <th>GOYASH VELOURA</th>
+                  <th>GOYASH IMPERIO</th>
+                  <th>GOYASH PRIMER</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Category</strong></td>
+                  <td>Interior Emulsion</td>
+                  <td>Luxury Interior Emulsion</td>
+                  <td>Premium Exterior Emulsion</td>
+                  <td>Water-Based Wall Primer</td>
+                </tr>
+                <tr>
+                  <td><strong>Surface Finish</strong></td>
+                  <td>Smooth Matte</td>
+                  <td>Rich Velvet Matte</td>
+                  <td>Smooth Semi-Sheen</td>
+                  <td>Opaque Matte Foundation</td>
+                </tr>
+                <tr>
+                  <td><strong>Washability</strong></td>
+                  <td>High Washability</td>
+                  <td>Stain-Guard Washable</td>
+                  <td>Rain Washable</td>
+                  <td>Undercoat (Non-Washable)</td>
+                </tr>
+                <tr>
+                  <td><strong>VOC Content</strong></td>
+                  <td>Low VOC (<15 g/l)</td>
+                  <td>Low VOC (<10 g/l)</td>
+                  <td>Low VOC (<25 g/l)</td>
+                  <td>Low VOC (<15 g/l)</td>
+                </tr>
+                <tr>
+                  <td><strong>Durability Life</strong></td>
+                  <td>5 - 6 Years</td>
+                  <td>8+ Years</td>
+                  <td>7+ Years (Weather Guard)</td>
+                  <td>Base Adhesion Foundation</td>
+                </tr>
+                <tr>
+                  <td><strong>Anti-Algae</strong></td>
+                  <td>Standard</td>
+                  <td>Advanced Dust-Repellent</td>
+                  <td>Extreme Weather Shield</td>
+                  <td>Alkaline-Resistant Seal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Premium Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col company-col">
+          <a href="index.html" class="footer-logo" aria-label="Goyash Paints Home">
+            <img src="original-logo.jpeg" alt="Goyash Paints Logo" class="logo-img footer-logo-img" />
+          </a>
+          <p class="footer-about">
+            Redefining spaces with premium quality, innovation, and eco-friendly paint solutions. Empowering beauty and durability since 2005.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="index.html#products">Interior Paints</a></li>
+            <li><a href="index.html#products">Exterior Paints</a></li>
+            <li><a href="index.html#products">Wood &amp; Metal Care</a></li>
+            <li><a href="index.html#products">Waterproofing</a></li>
+            <li><a href="index.html#products">Primers &amp; Undercoats</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#gallery">Project Gallery</a></li>
+            <li><a href="index.html#comparison">Product Comparison</a></li>
+            <li><a href="index.html#dealer">Dealer Registration</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="index.html#contact">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col contact-col">
+          <h3>Contact Us</h3>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>plot no 95 Ajan Deeg Rajasthan, Bharatpur, India. Pin Code : 321025.</span>
+          </p>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span><a href="tel:+917742296359" style="color: inherit; text-decoration: none;">+91 77422 96359</a></span>
+          </p>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span><a href="mailto:goyashpaints@gmail.com" style="color: inherit; text-decoration: none;">goyashpaints@gmail.com</a></span>
+          </p>
+          
+          <div class="newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+              <input type="email" placeholder="Your email address" required aria-label="Email address" />
+              <button type="submit" aria-label="Subscribe">→</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Goyash Paints. All rights reserved. | Built for premium performance. | Crafted by <span style="color: #a3e635; font-weight: 700;">UPliv</span></p>
+      </div>
+    </footer>
+
+    <!-- Simple Filter Logic Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const catalogItems = document.querySelectorAll('.catalog-item');
+
+        filterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            catalogItems.forEach(item => {
+              const itemCategory = item.getAttribute('data-category');
+              if (filterValue === 'all' || itemCategory === filterValue) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                  item.classList.add('visible');
+                }, 50);
+              } else {
+                item.style.display = 'none';
+                item.classList.remove('visible');
+              }
+            });
+          });
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
