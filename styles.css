@@ -2757,6 +2757,16 @@ h1 {
   box-shadow: var(--shadow);
 }
 
+.dealer-section-about {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 80px 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+}
+
 .different-header {
   text-align: center;
   max-width: 800px;
@@ -2896,7 +2906,7 @@ h1 {
   .about-hero-visual {
     order: -1;
   }
-  .story-section, .vision-mission-section, .different-section {
+  .story-section, .vision-mission-section, .different-section, .dealer-section-about {
     margin: 40px 24px;
     border-radius: 24px;
     padding: 50px 0;
@@ -2926,7 +2936,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .story-section, .vision-mission-section, .different-section {
+  .story-section, .vision-mission-section, .different-section, .dealer-section-about {
     margin: 30px 16px;
     padding: 40px 0;
   }
