@@ -2642,35 +2642,37 @@ h1 {
 
 .story-stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 35px;
 }
 
 .story-stat-card {
   background: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 26px 20px;
+  border-radius: 14px;
+  padding: 16px 12px;
   text-align: center;
   box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .story-stat-card .stat-number {
   display: block;
   font-family: 'Outfit', sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--secondary);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .story-stat-card .stat-label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
 }
 
 .story-stat-card:hover {
@@ -2889,6 +2891,10 @@ h1 {
   .story-visual-panel {
     order: -1;
     height: 380px;
+  }
+  .story-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
   .vision-mission-grid {
     grid-template-columns: 1fr;
