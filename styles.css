@@ -2573,5 +2573,335 @@ h1 {
   }
 }
 
+/* About Page Specific Styles */
+.about-hero {
+  padding: 60px 0 80px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-4px);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-hero-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Our Story Section */
+.story-section {
+  padding: 100px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: center;
+}
+
+.story-visual-panel {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--border);
+  height: 480px;
+}
+
+.story-panel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.story-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.story-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(46, 139, 87, 0.2);
+}
+
+/* Vision & Mission Section */
+.vision-mission-section {
+  padding: 100px 0;
+  background: var(--bg);
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.vision-card, .mission-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.vision-card:hover, .mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.vm-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--secondary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.vision-card h2, .mission-card h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin: 0 0 16px 0;
+  font-weight: 800;
+}
+
+.vision-card p, .mission-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* What Makes Us Different */
+.different-section {
+  padding: 100px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.different-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.different-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.diff-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px 24px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.diff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(46, 139, 87, 0.2);
+}
+
+.diff-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--secondary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+
+.diff-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.diff-card h3 {
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin: 0 0 10px 0;
+  font-weight: 800;
+}
+
+.diff-card p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Promise Section */
+.promise-section {
+  padding: 100px 0;
+  background: var(--bg);
+}
+
+.promise-card-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.promise-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(46, 139, 87, 0.1);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none;
+  top: 10%;
+  left: 10%;
+}
+
+.promise-container {
+  background: linear-gradient(135deg, rgba(11, 45, 92, 0.95) 0%, rgba(7, 27, 55, 0.98) 100%), url('Hero image 3.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+  padding: 80px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(11, 45, 92, 0.2);
+  z-index: 2;
+}
+
+.promise-container h2 {
+  color: #a3e635;
+  font-size: 1.8rem;
+  margin: 0 0 20px;
+  font-weight: 800;
+}
+
+.promise-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.promise-headline {
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 700;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+}
+
+.promise-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* About Responsive Media Queries */
+@media (max-width: 1100px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-hero-visual {
+    order: -1;
+  }
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .story-visual-panel {
+    order: -1;
+    height: 380px;
+  }
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .different-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .promise-container {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .different-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .vision-card, .mission-card {
+    padding: 30px 24px;
+  }
+  .promise-container {
+    padding: 50px 24px;
+    border-radius: 24px;
+  }
+  .promise-container p {
+    font-size: 0.95rem;
+  }
+  .promise-headline {
+    font-size: 1.15rem;
+  }
+}
+
+
 
 
