@@ -5,6 +5,7 @@ let currentSlide = 0;
 let intervalId;
 
 function renderDots() {
+  if (!dotsContainer) return;
   slides.forEach((_, index) => {
     const dot = document.createElement('button');
     dot.type = 'button';
@@ -15,11 +16,13 @@ function renderDots() {
 }
 
 function updateDots() {
+  if (!dotsContainer) return;
   const dots = Array.from(dotsContainer.children);
   dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
 }
 
 function showSlide(index) {
+  if (slides.length === 0) return;
   currentSlide = (index + slides.length) % slides.length;
   slides.forEach((slide, slideIndex) => {
     slide.classList.toggle('active', slideIndex === currentSlide);
@@ -28,18 +31,20 @@ function showSlide(index) {
 }
 
 function startAutoPlay() {
+  if (slides.length === 0) return;
   clearInterval(intervalId);
   intervalId = setInterval(() => {
     showSlide(currentSlide + 1);
   }, 5000);
 }
 
-renderDots();
-showSlide(0);
-startAutoPlay();
-
-window.addEventListener('mouseenter', () => clearInterval(intervalId));
-window.addEventListener('mouseleave', startAutoPlay);
+if (slides.length > 0 && dotsContainer) {
+  renderDots();
+  showSlide(0);
+  startAutoPlay();
+  window.addEventListener('mouseenter', () => clearInterval(intervalId));
+  window.addEventListener('mouseleave', startAutoPlay);
+}
 
 // Intersection Observer for scroll animations
 const observerOptions = {
