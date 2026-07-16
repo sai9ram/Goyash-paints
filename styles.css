@@ -326,11 +326,19 @@ h1 {
 }
 
 .logo-img {
-  height: 52px;
+  height: 68px;
   width: auto;
-  max-width: 180px;
+  max-width: 220px;
   object-fit: contain;
   display: block;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  margin-bottom: 20px;
 }
 
 .nav-menu {
