@@ -3740,3 +3740,42 @@ h1 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+
+/* Video background hero styles */
+.video-hero {
+  position: relative;
+  overflow: hidden;
+  background: none !important;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  object-fit: cover;
+}
+
+.video-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(7, 27, 55, 0.45) 0%, rgba(7, 27, 55, 0.7) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.video-hero .products-hero-content,
+.video-hero .back-link {
+  position: relative;
+  z-index: 2;
+}
+
