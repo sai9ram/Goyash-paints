@@ -2963,10 +2963,6 @@ h1 {
   .products-hero {
     padding: 100px 20px 80px;
   }
-  .products-hero .back-link {
-    top: 20px;
-    left: 20px;
-  }
 }
 
 /* Products Page Specific Styles */
@@ -3022,27 +3018,30 @@ h1 {
 
 .products-hero .back-link, .projects-hero .back-link {
   position: absolute;
-  top: 30px;
-  left: 40px;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
   color: #ffffff;
   background: rgba(7, 27, 55, 0.6);
   backdrop-filter: blur(8px);
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 99px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-weight: 700;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease, background 0.2s ease;
+  font-size: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   margin-bottom: 0;
+  z-index: 10;
 }
 
 .products-hero .back-link:hover, .projects-hero .back-link:hover {
-  transform: translateX(-4px);
+  transform: translateX(-50%) translateY(-2px);
   background: rgba(7, 27, 55, 0.85);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .products-hero-content {
