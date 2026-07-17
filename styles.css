@@ -3019,8 +3019,7 @@ h1 {
 .products-hero .back-link, .projects-hero .back-link {
   position: absolute;
   top: 110px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 40px;
   color: #ffffff;
   background: rgba(7, 27, 55, 0.6);
   backdrop-filter: blur(8px);
@@ -3039,9 +3038,16 @@ h1 {
 }
 
 .products-hero .back-link:hover, .projects-hero .back-link:hover {
-  transform: translateX(-50%) translateY(-2px);
+  transform: translateY(-2px);
   background: rgba(7, 27, 55, 0.85);
   border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .products-hero .back-link, .projects-hero .back-link {
+    top: 90px;
+    right: 20px;
+  }
 }
 
 .products-hero-content {
