@@ -3939,3 +3939,57 @@ color: #a3e635;
   z-index: 2;
 }
 
+/* Contact Form Trust & Social Connect */
+.form-trust-footer {
+  margin-top: 25px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  text-align: left;
+}
+
+.trust-message {
+  font-size: 0.85rem;
+  color: var(--copy-light);
+  margin-bottom: 15px !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-social-connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-social-connect span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.form-social-connect .social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.form-social-connect .social-link {
+  color: var(--primary);
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.form-social-connect .social-link:hover {
+  opacity: 1;
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.form-social-connect .footer-icon-svg {
+  width: 18px;
+  height: 18px;
+}
+
+
