@@ -3979,17 +3979,23 @@ color: #a3e635;
   color: var(--primary);
   opacity: 0.7;
   transition: all 0.2s ease;
+  background: none;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
 }
 
 .form-social-connect .social-link:hover {
+  background: none !important;
+  color: var(--secondary) !important;
   opacity: 1;
-  color: var(--secondary);
   transform: translateY(-2px);
 }
 
 .form-social-connect .footer-icon-svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 
