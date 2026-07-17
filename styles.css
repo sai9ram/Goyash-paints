@@ -590,6 +590,98 @@ h1 {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ── Floating Action Buttons ── */
+.floating-buttons {
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+}
+
+.float-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+  transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s ease;
+  position: relative;
+}
+
+.float-btn:hover {
+  transform: scale(1.13) translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.38);
+}
+
+/* Tooltip label */
+.float-btn::before {
+  content: attr(data-label);
+  position: absolute;
+  right: calc(100% + 10px);
+  background: rgba(15, 23, 42, 0.92);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 5px 12px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.float-btn:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* WhatsApp */
+.float-btn-whatsapp {
+  background: #25D366;
+}
+
+.float-btn-whatsapp svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+/* Pulse ring on WhatsApp */
+@keyframes float-pulse {
+  0%   { transform: scale(1); opacity: 0.7; }
+  70%  { transform: scale(1.55); opacity: 0; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+.float-btn-whatsapp::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25D366;
+  animation: float-pulse 2.2s infinite;
+  z-index: -1;
+}
+
+/* Call */
+.float-btn-call {
+  background: #1e40af;
+}
+
+.float-btn-call svg {
+  width: 26px;
+  height: 26px;
+  stroke: #fff;
+  fill: none;
+}
+
 @media (max-width: 1200px) {
   .footer-container {
     grid-template-columns: 1fr 1fr 1fr;
