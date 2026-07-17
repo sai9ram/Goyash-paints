@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformations Gallery | Goyash Paints</title>
+    <meta
+      name="description"
+      content="Browse through before and after transformations of homes, offices, and commercial projects styled with premium, long-lasting Goyash Paints."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpeg" href="favicon.jpeg" />
+  </head>
+  <body>
+    <!-- Premium Navigation Header -->
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo" aria-label="Goyash Paints Home">
+            <img src="original-logo.jpeg" alt="Goyash Paints Logo" class="logo-img" />
+          </a>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a href="quote.html" class="btn-nav">Get a Quote</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="projects-hero" id="projects-hero">
+      <a href="index.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Home
+      </a>
+
+      <div class="products-hero-content">
+        <span class="eyebrow">Visual Gallery</span>
+        <h1>Outstanding Spaces Built with Goyash Paints</h1>
+        <p class="hero-copy">
+          From luxury villa interiors to heavy-duty weatherproofing projects, view structural transformations powered by Goyash Paints' advanced coating solutions.
+        </p>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <!-- Project Gallery Section -->
+      <section class="catalog-section" id="gallery-catalog" aria-label="Project Transformations">
+        <!-- Interactive Category Filters -->
+        <div class="catalog-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="interior">Residential Interior</button>
+          <button class="filter-btn" data-filter="exterior">Residential Exterior</button>
+          <button class="filter-btn" data-filter="commercial">Commercial / Industrial</button>
+        </div>
+
+        <div class="projects-gallery-grid">
+          <!-- Item 1 - Living Room (Interior) -->
+          <div class="project-card-item fade-in-card" data-category="interior" style="--card-index: 1;">
+            <div class="project-ba-slider">
+              <img src="Living Room Transformation before.jpeg" alt="Living room before painting" class="project-img-before" />
+              <img src="Living Room Transformation After.jpeg" alt="Living room after painting" class="project-img-after" />
+              <div class="project-ba-overlay">
+                <span class="project-title">Living Room Transformation</span>
+                <span class="project-tag">Interior Emulsion • Goyash Veloura</span>
+                <span class="project-hover-hint">Hover to see Before</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 - Bedroom Elegance (Interior) -->
+          <div class="project-card-item fade-in-card" data-category="interior" style="--card-index: 2;">
+            <div class="project-ba-slider">
+              <img src="Bedroom Elegance Before.jpeg" alt="Bedroom before painting" class="project-img-before" />
+              <img src="Bedroom Elegance After.jpeg" alt="Bedroom after painting" class="project-img-after" />
+              <div class="project-ba-overlay">
+                <span class="project-title">Luxury Bedroom Finish</span>
+                <span class="project-tag">Interior Emulsion • Goyash Smart</span>
+                <span class="project-hover-hint">Hover to see Before</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 - Exterior Revamp (Exterior) -->
+          <div class="project-card-item fade-in-card" data-category="exterior" style="--card-index: 3;">
+            <div class="project-ba-slider">
+              <img src="Exterior Makeover  Before.webp" alt="Exterior before painting" class="project-img-before" />
+              <img src="exterior-makeover-after.jpeg" alt="Exterior after painting" class="project-img-after" />
+              <div class="project-ba-overlay">
+                <span class="project-title">Modern Exterior Makeover</span>
+                <span class="project-tag">Exterior Coating • Goyash Imperio</span>
+                <span class="project-hover-hint">Hover to see Before</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 - Commercial Facade (Commercial) -->
+          <div class="project-card-item fade-in-card" data-category="commercial" style="--card-index: 4;">
+            <div class="project-ba-slider">
+              <img src="exterior-makeover-after.jpeg" alt="Commercial facility after painting" class="project-img-after" />
+              <div class="project-ba-overlay">
+                <span class="project-title">Regional R&D Center Facade</span>
+                <span class="project-tag">Commercial Coatings • Weather-Safe Series</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA Section -->
+      <section class="final-cta-section" id="projects-cta" aria-label="Projects Call to Action">
+        <div class="final-cta-container">
+          <h2>Ready to Transform Your Space?</h2>
+          <p>
+            Get expert guidance on paint selection, colour combinations, and coverage estimation. Request a free quote today.
+          </p>
+          <div class="final-cta-actions">
+            <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Premium Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col company-col">
+          <a href="index.html" class="footer-logo" aria-label="Goyash Paints Home">
+            <img src="original-logo.jpeg" alt="Goyash Paints Logo" class="logo-img footer-logo-img" />
+          </a>
+          <p class="footer-about">
+            Redefining spaces with premium quality, innovation, and eco-friendly paint solutions. Empowering beauty and durability since 2005.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="products.html">Interior Paints</a></li>
+            <li><a href="products.html">Exterior Paints</a></li>
+            <li><a href="products.html">Wood &amp; Metal Care</a></li>
+            <li><a href="products.html">Waterproofing</a></li>
+            <li><a href="products.html">Primers &amp; Undercoats</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="projects.html">Project Gallery</a></li>
+            <li><a href="index.html#comparison">Product Comparison</a></li>
+            <li><a href="index.html#dealer">Dealer Registration</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col contact-col">
+          <h3>Contact Us</h3>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>plot no 95 Ajan Deeg Rajasthan, Bharatpur, India. Pin Code : 321025.</span>
+          </p>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 77422 96359</span>
+          </p>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>info@goyashpaints.com</span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <p>&copy; 2026 Goyash Paints. All Rights Reserved. Manufactured by Goyash chemical industries.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive script for filtering projects -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-card-item');
+
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            const category = btn.getAttribute('data-filter');
+
+            projectItems.forEach(item => {
+              const itemCat = item.getAttribute('data-category');
+              if (category === 'all' || itemCat === category) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                  item.style.opacity = '1';
+                  item.style.transform = 'translateY(0)';
+                }, 50);
+              } else {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                  item.style.display = 'none';
+                }, 300);
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

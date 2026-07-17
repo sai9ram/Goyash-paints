@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request a Quote | Goyash Paints</title>
+    <meta
+      name="description"
+      content="Get a customized price estimation and paint quantity quotation for your residential or commercial painting projects with Goyash Paints."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpeg" href="favicon.jpeg" />
+  </head>
+  <body>
+    <!-- Premium Navigation Header -->
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo" aria-label="Goyash Paints Home">
+            <img src="original-logo.jpeg" alt="Goyash Paints Logo" class="logo-img" />
+          </a>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a href="quote.html" class="btn-nav active">Get a Quote</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="projects-hero" id="quote-hero">
+      <a href="index.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Home
+      </a>
+
+      <div class="products-hero-content">
+        <span class="eyebrow">Quote Calculator</span>
+        <h1>Paint Cost &amp; Quantity Estimator</h1>
+        <p class="hero-copy">
+          Estimate the total paint volume and cost required for your walls in just a few clicks. Select your product, enter your area dimensions, and get your estimation.
+        </p>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <section class="calculator-section" aria-label="Quote Request Builder">
+        <div class="calculator-container">
+          <!-- Left Column: Estimator Options -->
+          <div class="calculator-settings fade-in-card" style="--card-index: 1;">
+            <h3>1. Estimate Details</h3>
+            
+            <div class="form-group">
+              <label for="paint-product">Select Paint Product</label>
+              <select id="paint-product" required>
+                <option value="smart" data-price="240" data-coverage="140" selected>Goyash Smart (Interior Matte - High Washability)</option>
+                <option value="veloura" data-price="450" data-coverage="150">Goyash Veloura (Luxury Interior - Velvet Sheen)</option>
+                <option value="imperio" data-price="380" data-coverage="60">Goyash Imperio (Premium Exterior - Weather Shield)</option>
+                <option value="primer" data-price="150" data-coverage="110">Goyash Primer (Undercoat - High Grip Masonry)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="wall-area">Total Wall/Surface Area (sq. ft.)</label>
+              <div class="slider-group">
+                <input type="range" id="wall-area-slider" min="100" max="5000" step="50" value="1000" />
+                <input type="number" id="wall-area-input" min="100" max="100000" value="1000" />
+              </div>
+              <p class="helper-text">Include all walls, doors, ceilings, or boundary lengths being painted.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="paint-coats">Number of Coats</label>
+              <select id="paint-coats">
+                <option value="1">1 Coat (Touch-up / Primer)</option>
+                <option value="2" selected>2 Coats (Recommended Standard)</option>
+                <option value="3">3 Coats (Maximum Depth &amp; Protection)</option>
+              </select>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="include-labor" checked />
+              <label for="include-labor">Include estimated application/labor cost (₹12 per sq. ft.)</label>
+            </div>
+          </div>
+
+          <!-- Right Column: Results & Quote Submission -->
+          <div class="calculator-results fade-in-card" style="--card-index: 2;">
+            <div class="estimator-result-card">
+              <h3>2. Calculation Output</h3>
+              <div class="result-details">
+                <div class="result-row">
+                  <span>Required Paint Volume:</span>
+                  <strong id="calc-volume">0 Litres</strong>
+                </div>
+                <div class="result-row">
+                  <span>Estimated Material Cost:</span>
+                  <strong id="calc-material-cost">₹0</strong>
+                </div>
+                <div class="result-row" id="labor-cost-row">
+                  <span>Estimated Labor Cost:</span>
+                  <strong id="calc-labor-cost">₹0</strong>
+                </div>
+                <div class="result-row total-row">
+                  <span>Estimated Total:</span>
+                  <strong id="calc-total">₹0</strong>
+                </div>
+              </div>
+              <p class="estimate-disclaimer">*Estimates are approximate. Actual coverage depends on surface porosity and preparation.</p>
+            </div>
+
+            <!-- Lead Capture Form -->
+            <div class="calculator-lead-form">
+              <h3>3. Finalize &amp; Request Official Quote</h3>
+              <p>Submit your details to get an official quotation and schedule a professional site inspection.</p>
+              
+              <form class="quote-capture-form" onsubmit="event.preventDefault(); alert('Your quote request has been submitted! Our project executive will contact you shortly.'); this.reset();">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <input type="text" placeholder="Your Name" required />
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" placeholder="Mobile Number" required />
+                  </div>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <input type="email" placeholder="Email Address" required />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" placeholder="Project City / Area Code" required />
+                  </div>
+                </div>
+                
+                <!-- Hidden inputs to submit estimator outputs -->
+                <input type="hidden" id="form-calc-product" name="calc_product" value="" />
+                <input type="hidden" id="form-calc-area" name="calc_area" value="" />
+                <input type="hidden" id="form-calc-volume" name="calc_volume" value="" />
+                <input type="hidden" id="form-calc-total" name="calc_total" value="" />
+
+                <button type="submit" class="btn btn-primary btn-submit-quote">Request Site Visit &amp; Quote</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Premium Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col company-col">
+          <a href="index.html" class="footer-logo" aria-label="Goyash Paints Home">
+            <img src="original-logo.jpeg" alt="Goyash Paints Logo" class="logo-img footer-logo-img" />
+          </a>
+          <p class="footer-about">
+            Redefining spaces with premium quality, innovation, and eco-friendly paint solutions. Empowering beauty and durability since 2005.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-link">
+              <svg class="footer-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="products.html">Interior Paints</a></li>
+            <li><a href="products.html">Exterior Paints</a></li>
+            <li><a href="products.html">Wood &amp; Metal Care</a></li>
+            <li><a href="products.html">Waterproofing</a></li>
+            <li><a href="products.html">Primers &amp; Undercoats</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="projects.html">Project Gallery</a></li>
+            <li><a href="index.html#comparison">Product Comparison</a></li>
+            <li><a href="index.html#dealer">Dealer Registration</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col contact-col">
+          <h3>Contact Us</h3>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>plot no 95 Ajan Deeg Rajasthan, Bharatpur, India. Pin Code : 321025.</span>
+          </p>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 77422 96359</span>
+          </p>
+          <p class="contact-info">
+            <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>info@goyashpaints.com</span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <p>&copy; 2026 Goyash Paints. All Rights Reserved. Manufactured by Goyash chemical industries.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive script for calculator -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const productSelect = document.getElementById('paint-product');
+        const areaSlider = document.getElementById('wall-area-slider');
+        const areaInput = document.getElementById('wall-area-input');
+        const coatsSelect = document.getElementById('paint-coats');
+        const includeLaborCheckbox = document.getElementById('include-labor');
+
+        const calcVolume = document.getElementById('calc-volume');
+        const calcMaterialCost = document.getElementById('calc-material-cost');
+        const calcLaborCost = document.getElementById('calc-labor-cost');
+        const calcTotal = document.getElementById('calc-total');
+        const laborCostRow = document.getElementById('labor-cost-row');
+
+        // Form hidden inputs
+        const formProduct = document.getElementById('form-calc-product');
+        const formArea = document.getElementById('form-calc-area');
+        const formVolume = document.getElementById('form-calc-volume');
+        const formTotal = document.getElementById('form-calc-total');
+
+        function updateCalculation() {
+          const area = parseFloat(areaInput.value) || 0;
+          const selectedOption = productSelect.options[productSelect.selectedIndex];
+          const pricePerLitre = parseFloat(selectedOption.getAttribute('data-price')) || 0;
+          const baseCoverage = parseFloat(selectedOption.getAttribute('data-coverage')) || 100; // sqft per litre for base coats
+          const coats = parseInt(coatsSelect.value) || 2;
+          const includeLabor = includeLaborCheckbox.checked;
+
+          // Adjust coverage by coats.
+          // The baseCoverage given in dataset is generally for 2 coats (for smart, veloura, imperio).
+          // Let's assume coverage is given as single-coat or multi-coat coverage and calculate.
+          // Let's divide base coverage by coats to get real coverage for that specific setup.
+          // Actually, let's treat the base coverage from HTML attribute as single-coat equivalent for easy calculation:
+          // e.g. Smart: 140 sqft/L (single coat), Veloura: 150 sqft/L (single coat), Imperio: 60 sqft/L (single coat), Primer: 110 sqft/L (single coat).
+          // Litres required = (Area * Coats) / SingleCoatCoverage
+          const singleCoatCoverage = baseCoverage;
+          const litresRequired = Math.ceil((area * coats) / singleCoatCoverage);
+          const materialCost = litresRequired * pricePerLitre;
+          
+          let laborCost = 0;
+          if (includeLabor) {
+            laborCost = area * 12; // ₹12 per sq. ft.
+            laborCostRow.style.display = 'flex';
+          } else {
+            laborCostRow.style.display = 'none';
+          }
+
+          const totalCost = materialCost + laborCost;
+
+          // Update UI
+          calcVolume.textContent = `${litresRequired} Litre${litresRequired !== 1 ? 's' : ''}`;
+          calcMaterialCost.textContent = `₹${materialCost.toLocaleString('en-IN')}`;
+          calcLaborCost.textContent = `₹${laborCost.toLocaleString('en-IN')}`;
+          calcTotal.textContent = `₹${totalCost.toLocaleString('en-IN')}`;
+
+          // Update Form inputs
+          formProduct.value = selectedOption.text;
+          formArea.value = `${area} sq. ft.`;
+          formVolume.value = `${litresRequired} Litres`;
+          formTotal.value = `₹${totalCost}`;
+        }
+
+        // Sync slider & input
+        areaSlider.addEventListener('input', () => {
+          areaInput.value = areaSlider.value;
+          updateCalculation();
+        });
+
+        areaInput.addEventListener('input', () => {
+          if (areaInput.value > 100000) areaInput.value = 100000;
+          areaSlider.value = areaInput.value;
+          updateCalculation();
+        });
+
+        productSelect.addEventListener('change', updateCalculation);
+        coatsSelect.addEventListener('change', updateCalculation);
+        includeLaborCheckbox.addEventListener('change', updateCalculation);
+
+        // Initial trigger
+        updateCalculation();
+      });
+    </script>
+  </body>
+</html>
