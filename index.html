@@ -18,6 +18,71 @@
     <link rel="icon" type="image/jpeg" href="favicon.jpeg" />
   </head>
   <body>
+
+    <!-- ═══════════════════════════════════════════
+         SPLASH SCREEN
+    ═══════════════════════════════════════════ -->
+    <div id="splash-screen" role="dialog" aria-label="Goyash Paints intro">
+      <!-- Video -->
+      <video id="splash-video"
+             autoplay
+             muted
+             playsinline
+             preload="auto"
+             aria-hidden="true">
+        <source src="Splash screen Video.mp4" type="video/mp4">
+      </video>
+
+      <!-- Progress bar -->
+      <div id="splash-progress"></div>
+
+      <!-- Logo watermark -->
+      <div id="splash-logo" aria-hidden="true">
+        <span>GOYASH <em>PAINTS</em></span>
+      </div>
+
+      <!-- Skip button -->
+      <button id="splash-skip" aria-label="Skip intro">Skip ›</button>
+    </div>
+
+    <script>
+      (function () {
+        var splash   = document.getElementById('splash-screen');
+        var video    = document.getElementById('splash-video');
+        var progress = document.getElementById('splash-progress');
+        var skipBtn  = document.getElementById('splash-skip');
+
+        function dismiss() {
+          splash.classList.add('hidden');
+          document.body.style.overflow = '';
+          setTimeout(function () { splash.remove(); }, 750);
+        }
+
+        /* Lock scroll while splash is visible */
+        document.body.style.overflow = 'hidden';
+
+        /* Progress bar tracks video playback */
+        video.addEventListener('timeupdate', function () {
+          if (video.duration) {
+            var pct = (video.currentTime / video.duration) * 100;
+            progress.style.width = pct + '%';
+            progress.style.transitionDuration = '0.25s';
+          }
+        });
+
+        /* Auto-dismiss when video ends */
+        video.addEventListener('ended', dismiss);
+
+        /* Skip on button click */
+        skipBtn.addEventListener('click', dismiss);
+
+        /* Fallback: if video fails to load, dismiss after 4s */
+        video.addEventListener('error', function () {
+          setTimeout(dismiss, 4000);
+        });
+      })();
+    </script>
+
     <!-- Premium Navigation Header -->
     <header class="main-header">
       <nav class="navbar">

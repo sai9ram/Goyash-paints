@@ -590,6 +590,129 @@ h1 {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ── Splash Screen ── */
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+#splash-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#splash-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dark gradient overlay so skip button is readable */
+#splash-screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.0) 50%,
+    rgba(0,0,0,0.55) 100%
+  );
+  pointer-events: none;
+}
+
+/* Progress bar at bottom */
+#splash-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #a3e635;
+  z-index: 2;
+  transition: width linear;
+}
+
+/* Skip button */
+#splash-skip {
+  position: absolute;
+  bottom: 32px;
+  right: 20px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 10px 22px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#splash-skip:hover,
+#splash-skip:active {
+  background: rgba(163, 230, 53, 0.3);
+  transform: scale(1.04);
+}
+
+/* Logo watermark on splash */
+#splash-logo {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#splash-logo span {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+#splash-logo span em {
+  color: #a3e635;
+  font-style: normal;
+}
+
+/* Mobile-first: ensure portrait video fills well on mobile */
+@media (max-width: 600px) {
+  #splash-video {
+    object-position: center center;
+  }
+  #splash-skip {
+    bottom: 24px;
+    right: 16px;
+    font-size: 0.8rem;
+    padding: 9px 18px;
+  }
+  #splash-logo span {
+    font-size: 1.2rem;
+  }
+}
+
 /* ── Floating Action Buttons ── */
 .floating-buttons {
   position: fixed;
