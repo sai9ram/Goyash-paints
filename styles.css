@@ -4468,4 +4468,223 @@ color: #a3e635;
   height: 20px;
 }
 
+/* ═══════════════════════════════════════════
+   QUICK ENQUIRY POPUP & FAB STYLES
+═══════════════════════════════════════════ */
+
+/* Overlay container */
+.enquiry-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 27, 55, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+}
+
+.enquiry-popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Popup card */
+.enquiry-popup-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(7, 17, 31, 0.25);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.enquiry-popup-overlay.active .enquiry-popup-card {
+  transform: scale(1) translateY(0);
+}
+
+/* Header */
+.enquiry-popup-header {
+  padding: 24px 28px 16px;
+  background: linear-gradient(135deg, #0b2d5c 0%, #071b37 100%);
+  color: #ffffff;
+  position: relative;
+}
+
+.enquiry-popup-header h3 {
+  color: #ffffff;
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+.enquiry-popup-header p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+/* Close button */
+.enquiry-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  line-height: 1;
+}
+
+.enquiry-popup-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg);
+}
+
+/* Content & Form */
+.enquiry-popup-body {
+  padding: 28px;
+}
+
+.enquiry-form-group {
+  margin-bottom: 18px;
+}
+
+.enquiry-form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.enquiry-form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--primary);
+  background-color: var(--surface);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.enquiry-form-control:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.15);
+  background-color: #ffffff;
+}
+
+textarea.enquiry-form-control {
+  resize: none;
+  min-height: 90px;
+}
+
+/* Submit button */
+.enquiry-submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent-dark) 100%);
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(46, 139, 87, 0.2);
+}
+
+.enquiry-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 139, 87, 0.35);
+}
+
+.enquiry-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Success View */
+.enquiry-success-view {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.enquiry-success-view.active {
+  display: block;
+}
+
+.enquiry-success-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enquiry-success-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.enquiry-success-view h4 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin: 0 0 10px;
+}
+
+.enquiry-success-view p {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Floating button style */
+.float-btn-enquiry {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent-dark) 100%);
+  color: #ffffff;
+}
+
+.float-btn-enquiry svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+
 
