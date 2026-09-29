@@ -6475,6 +6475,269 @@ textarea.enquiry-form-control {
 }
 
 /* ═══════════════════════════════════════════
+   PRODUCT SHOWCASE & SPECIFICATIONS (PRODUCTS.HTML)
+═══════════════════════════════════════════ */
+.products-hero {
+  background: linear-gradient(135deg, #071B37 0%, #0B2D5C 100%);
+  color: #ffffff;
+  padding: 44px 20px;
+  text-align: center;
+}
+
+.products-hero h1 {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.products-hero .hero-copy {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.full-products-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.product-detail-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--border, #E5E7EB);
+  box-shadow: 0 10px 30px rgba(11, 45, 92, 0.06);
+  padding: 32px;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 36px;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.product-detail-image-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.product-detail-img {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.badge-stack {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}
+
+.p-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.p-badge-luxury { background: #0B2D5C; color: #ffffff; }
+.p-badge-premium { background: #2E8B57; color: #ffffff; }
+.p-badge-interior { background: #0284c7; color: #ffffff; }
+.p-badge-exterior { background: #d97706; color: #ffffff; }
+.p-badge-primer { background: #475569; color: #ffffff; }
+.p-badge-distemper { background: #65a30d; color: #ffffff; }
+.p-badge-sizes { background: rgba(255, 255, 255, 0.95); color: #0B2D5C; border: 1px solid #E5E7EB; }
+
+.product-detail-info {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.p-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--secondary, #2E8B57);
+  text-transform: uppercase;
+}
+
+.product-detail-info h2 {
+  margin: 6px 0 4px 0;
+  font-size: 1.8rem;
+}
+
+.p-slogan {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--muted, #8A9Aad);
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.p-description {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--text, #5F6C7B);
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+}
+
+.p-features-list {
+  margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.p-features-list h4,
+.p-tech-table-wrap h4,
+.recommended-system-box h4,
+.eco-benefits-box h4,
+.why-primer-box h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--heading, #0B2D5C);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.p-features-list ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.p-features-list li {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin-bottom: 8px;
+  color: var(--text, #5F6C7B);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.p-tech-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tech-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  font-size: 0.86rem;
+  box-sizing: border-box;
+  table-layout: fixed;
+}
+
+.tech-spec-table tr {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.tech-spec-table tr:last-child {
+  border-bottom: none;
+}
+
+.tech-spec-table th {
+  background: #f1f5f9;
+  color: var(--heading, #0B2D5C);
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 14px;
+  width: 35%;
+  vertical-align: top;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.tech-spec-table td {
+  color: var(--text, #5F6C7B);
+  padding: 10px 14px;
+  width: 65%;
+  vertical-align: top;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.recommended-system-box,
+.eco-benefits-box,
+.why-primer-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--secondary, #2E8B57);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.recommended-system-box p,
+.eco-benefits-box p,
+.why-primer-box li {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin-bottom: 6px;
+  color: var(--text);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.p-extra-meta {
+  margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.p-extra-meta p {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin-bottom: 6px;
+  color: var(--text);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.p-action {
+  margin-top: 16px;
+}
+
+/* ═══════════════════════════════════════════
    FLOATING ACTION BUTTONS (FIXED VIEWPORT)
 ═══════════════════════════════════════════ */
 .float-btn {
@@ -6791,6 +7054,146 @@ textarea.enquiry-form-control {
     max-width: max-content !important;
     margin: 0 auto !important;
     white-space: nowrap !important;
+  }
+
+  /* Mobile Product Details & Technical Table Responsive Layout (Fix Overflow) */
+  .full-products-showcase {
+    gap: 24px !important;
+    margin-top: 16px !important;
+  }
+
+  .product-detail-card {
+    padding: 16px 12px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .product-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .product-detail-info {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .product-detail-info h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .p-category {
+    font-size: 0.68rem !important;
+    white-space: normal !important;
+    display: block !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .p-slogan {
+    font-size: 0.76rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .p-description {
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 14px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .p-features-list h4,
+  .p-tech-table-wrap h4,
+  .recommended-system-box h4,
+  .eco-benefits-box h4,
+  .why-primer-box h4 {
+    font-size: 0.82rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .p-features-list ul {
+    padding-left: 16px !important;
+    margin: 0 !important;
+  }
+
+  .p-features-list li {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 6px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .p-tech-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    box-sizing: border-box !important;
+    margin-bottom: 16px !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .tech-spec-table {
+    width: 100% !important;
+    font-size: 0.76rem !important;
+    table-layout: fixed !important;
+    box-sizing: border-box !important;
+  }
+
+  .tech-spec-table th {
+    padding: 7px 8px !important;
+    width: 38% !important;
+    font-size: 0.76rem !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  .tech-spec-table td {
+    padding: 7px 8px !important;
+    width: 62% !important;
+    font-size: 0.76rem !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  .p-extra-meta p,
+  .recommended-system-box p,
+  .eco-benefits-box p,
+  .why-primer-box li {
+    font-size: 0.8rem !important;
+    line-height: 1.48 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .badge-stack {
+    top: 10px !important;
+    left: 10px !important;
+    gap: 4px !important;
+    max-width: 85% !important;
+  }
+
+  .p-badge {
+    padding: 4px 9px !important;
+    font-size: 0.68rem !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-break: break-word !important;
   }
 }
 
