@@ -27,8 +27,10 @@
              autoplay
              muted
              playsinline
+             webkit-playsinline
              preload="auto"
              aria-hidden="true">
+        <source src="Splash%20screen%20Video.mp4" type="video/mp4">
         <source src="Splash screen Video.mp4" type="video/mp4">
       </video>
       <div id="splash-progress"></div>
@@ -47,16 +49,11 @@
 
         if (!splash) return;
 
-        // Run ONLY on mobile screens (width <= 768px)
-        var isMobile = window.innerWidth <= 768;
-        if (!isMobile) {
-          splash.style.display = 'none';
-          splash.remove();
-          return;
-        }
+        var isDismissed = false;
 
         function dismiss() {
-          if (!splash) return;
+          if (isDismissed) return;
+          isDismissed = true;
           splash.classList.add('hidden');
           document.body.style.overflow = '';
           setTimeout(function () {
@@ -68,18 +65,38 @@
 
         document.body.style.overflow = 'hidden';
 
+        // Auto dismiss fallback timer after 7 seconds max
+        var fallbackTimer = setTimeout(dismiss, 7000);
+
         if (video) {
+          video.muted = true;
+          video.setAttribute('muted', '');
+          video.setAttribute('playsinline', '');
+          video.setAttribute('webkit-playsinline', '');
+
+          var promise = video.play();
+          if (promise !== undefined) {
+            promise.catch(function (err) {
+              console.log('Video autoplay handled:', err);
+            });
+          }
+
           video.addEventListener('timeupdate', function () {
-            if (video.duration) {
+            if (video.duration && progress) {
               var pct = (video.currentTime / video.duration) * 100;
               progress.style.width = pct + '%';
             }
           });
-          video.addEventListener('ended', dismiss);
-          video.addEventListener('error', dismiss);
-          
-          // Safety fallback timeout
-          setTimeout(dismiss, 10000);
+
+          video.addEventListener('ended', function() {
+            clearTimeout(fallbackTimer);
+            dismiss();
+          });
+
+          video.addEventListener('error', function() {
+            clearTimeout(fallbackTimer);
+            dismiss();
+          });
         } else {
           dismiss();
         }
@@ -87,9 +104,15 @@
         if (skipBtn) {
           skipBtn.addEventListener('click', function(e) {
             e.stopPropagation();
+            clearTimeout(fallbackTimer);
             dismiss();
           });
         }
+
+        splash.addEventListener('click', function() {
+          clearTimeout(fallbackTimer);
+          dismiss();
+        });
       })();
     </script>
 
