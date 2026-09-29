@@ -137,6 +137,10 @@ img {
   box-shadow: 0 6px 20px rgba(46, 139, 87, 0.35);
 }
 
+.mobile-quote-item {
+  display: none;
+}
+
 /* Nav Toggle Button (Hidden on Desktop) */
 .nav-toggle {
   display: none;
@@ -6758,6 +6762,32 @@ textarea.enquiry-form-control {
   .nav-menu li a:hover {
     color: var(--secondary, #2E8B57) !important;
     background: rgba(46, 139, 87, 0.08) !important;
+  }
+
+  .mobile-quote-item {
+    display: block !important;
+    width: 88% !important;
+    margin: 6px auto 6px auto !important;
+  }
+
+  .nav-btn-mobile {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 20px !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, var(--secondary, #2E8B57) 0%, var(--accent-dark, #1E5E3A) 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(46, 139, 87, 0.3) !important;
+  }
+
+  .nav-btn-mobile:hover,
+  .nav-btn-mobile.active {
+    background: linear-gradient(135deg, var(--accent-dark, #1E5E3A) 0%, var(--secondary, #2E8B57) 100%) !important;
+    color: #ffffff !important;
   }
 }
 
