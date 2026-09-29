@@ -45,11 +45,25 @@
         var progress = document.getElementById('splash-progress');
         var skipBtn  = document.getElementById('splash-skip');
 
+        if (!splash) return;
+
+        // Run ONLY on mobile screens (width <= 768px)
+        var isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+          splash.style.display = 'none';
+          splash.remove();
+          return;
+        }
+
         function dismiss() {
           if (!splash) return;
           splash.classList.add('hidden');
           document.body.style.overflow = '';
-          setTimeout(function () { splash.remove(); }, 750);
+          setTimeout(function () {
+            if (splash && splash.parentNode) {
+              splash.remove();
+            }
+          }, 750);
         }
 
         document.body.style.overflow = 'hidden';
@@ -59,15 +73,23 @@
             if (video.duration) {
               var pct = (video.currentTime / video.duration) * 100;
               progress.style.width = pct + '%';
-              progress.style.transitionDuration = '0.25s';
             }
           });
           video.addEventListener('ended', dismiss);
-          video.addEventListener('error', function () {
-            setTimeout(dismiss, 3000);
+          video.addEventListener('error', dismiss);
+          
+          // Safety fallback timeout
+          setTimeout(dismiss, 10000);
+        } else {
+          dismiss();
+        }
+
+        if (skipBtn) {
+          skipBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dismiss();
           });
         }
-        if (skipBtn) skipBtn.addEventListener('click', dismiss);
       })();
     </script>
 
