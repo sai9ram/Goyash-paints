@@ -85,6 +85,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const animatedCards = document.querySelectorAll('.fade-in-card');
   animatedCards.forEach(card => observer.observe(card));
 
+  // Mobile Navigation Toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close menu when a navigation link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   // FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-accordion-item');
   faqItems.forEach(item => {
