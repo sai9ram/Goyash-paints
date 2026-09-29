@@ -6211,3 +6211,138 @@ textarea.enquiry-form-control {
   }
 }
 
+/* ==========================================================================
+   GLOBAL MOBILE VIEW TYPOGRAPHY & COMPACT SINGLE-LINE CTA BUTTON STYLES
+   (Applied across all pages for max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Mobile Text Sizes: Compact, Balanced & Visually Appealing */
+  h1, 
+  .hero-title, 
+  .about-hero-title, 
+  .page-title {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  h2, 
+  .section-title, 
+  .catalog-title, 
+  .sustainability-title, 
+  .different-header .section-title,
+  .why-choose-header .section-title {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+  }
+
+  h3, 
+  .card-title, 
+  .feature-title, 
+  .product-title, 
+  .diff-card h3,
+  .value-card h4 {
+    font-size: 1.08rem !important;
+    line-height: 1.35 !important;
+  }
+
+  h4, h5, h6 {
+    font-size: 0.96rem !important;
+    line-height: 1.4 !important;
+  }
+
+  p, 
+  .hero-lead, 
+  .hero-copy, 
+  .about-hero-lead, 
+  .section-description, 
+  .card-desc, 
+  .diff-card p, 
+  .feature-content p, 
+  .footer-about {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .eyebrow, 
+  .section-eyebrow, 
+  .badge, 
+  .pill, 
+  .about-hero-badge, 
+  .nature-pill-eyebrow, 
+  .green-eyebrow {
+    font-size: 0.75rem !important;
+    padding: 4px 12px !important;
+  }
+
+  /* 2. Mobile CTA Buttons: Single-Lined Text & Small Compact Size across All Pages */
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-hero,
+  .btn-hero-3d,
+  .btn-hero-modern,
+  .btn-nav,
+  .btn-quote,
+  .btn-catalog,
+  .cta-button,
+  .card-cta,
+  .hero-actions .btn,
+  .about-hero-actions .btn,
+  .nav-actions .btn-nav,
+  .project-card .btn,
+  .product-card .btn,
+  a.btn,
+  button.btn {
+    white-space: nowrap !important;
+    font-size: 0.82rem !important;
+    padding: 8px 16px !important;
+    height: auto !important;
+    min-height: 36px !important;
+    border-radius: 10px !important;
+    gap: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* SVG Icons in Buttons */
+  .btn svg,
+  .btn-hero-modern svg,
+  .btn-nav svg {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Button Action Containers: Side by Side Single-Line Layout on Mobile */
+  .hero-actions,
+  .about-hero-actions,
+  .cta-actions,
+  .nav-actions,
+  .card-actions,
+  .button-group {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* Ensure card action footers keep buttons inline */
+  .card-cta-row,
+  .catalog-card-footer {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+}
+
