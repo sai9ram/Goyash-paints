@@ -5491,6 +5491,237 @@ textarea.enquiry-form-control {
   line-height: 1.4;
 }
 
+/* ==========================================================================
+   Redesigned Nature / Eco Friendly Banner Styles
+   ========================================================================== */
+.nature-banner-redesign {
+  position: relative;
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #047857 100%);
+  border-radius: 28px;
+  padding: 36px 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(6, 78, 59, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25);
+  margin-top: 36px;
+  margin-bottom: 36px;
+  color: #ffffff;
+}
+
+.nature-bg-glow {
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0) 70%);
+  pointer-events: none;
+  filter: blur(35px);
+}
+
+.nature-card-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 36px;
+  align-items: center;
+}
+
+/* Left Visual Image */
+.nature-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nature-img-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.nature-leaf-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(16, 185, 129, 0.4));
+  transition: transform 0.4s ease;
+}
+
+.nature-img-wrap:hover .nature-leaf-img {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.nature-img-badge {
+  position: absolute;
+  bottom: -10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #10b981;
+  color: #064e3b;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  white-space: nowrap;
+}
+
+.nature-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #064e3b;
+  border-radius: 50%;
+}
+
+/* Middle Content */
+.nature-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nature-pill-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.nature-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nature-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #d1fae5;
+  margin: 0;
+  max-width: 620px;
+}
+
+.nature-features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.nature-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #ecfdf5;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Right Seal */
+.nature-seal-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eco-seal-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.eco-seal-badge:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: #34d399;
+}
+
+.seal-icon-glow {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.5);
+}
+
+.seal-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.seal-text-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.seal-text-sub {
+  font-size: 0.74rem;
+  color: #a7f3d0;
+  font-weight: 600;
+}
+
+/* Responsive Styles for Nature Redesign Banner */
+@media (max-width: 992px) {
+  .nature-card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+  .nature-pill-eyebrow {
+    align-self: center;
+  }
+  .nature-features-list {
+    justify-content: center;
+  }
+  .nature-desc {
+    margin: 0 auto;
+  }
+}
+
 .nature-banner, .nature-banner-large {
   display: flex;
   align-items: center;
