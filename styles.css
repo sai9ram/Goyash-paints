@@ -1702,6 +1702,7 @@ h1 {
   padding: 18px 16px;
   border-bottom: 1px solid var(--border);
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .detailed-comparison-table th {
@@ -1864,11 +1865,33 @@ h1 {
 
 @media (max-width: 768px) {
   .comparison-table-container {
-    padding: 24px;
+    padding: 12px 10px !important;
+    border-radius: 16px !important;
   }
-  .detailed-comparison-table th, .detailed-comparison-table td {
-    padding: 12px 10px;
-    font-size: 0.88rem;
+  .table-responsive,
+  .p-tech-table-wrap {
+    overflow-x: auto !important;
+    display: block !important;
+    width: 100% !important;
+    border-radius: 12px;
+  }
+  .detailed-comparison-table,
+  .tech-spec-table {
+    width: auto !important;
+    min-width: 100% !important;
+  }
+  .detailed-comparison-table th, 
+  .detailed-comparison-table td,
+  .tech-spec-table th,
+  .tech-spec-table td {
+    padding: 8px 12px !important;
+    font-size: 0.78rem !important;
+    white-space: nowrap !important;
+    height: 36px !important;
+  }
+  .detailed-comparison-table th {
+    font-size: 0.8rem !important;
+    padding: 9px 12px !important;
   }
   .recommendation-grid {
     grid-template-columns: 1fr;
