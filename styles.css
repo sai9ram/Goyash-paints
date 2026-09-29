@@ -62,8 +62,10 @@ img {
 
 .eyebrow {
   display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin: 0 0 14px;
-  padding: 8px 12px;
+  padding: 8px 14px;
   border-radius: 999px;
   background: rgba(214, 162, 74, 0.16);
   color: var(--accent-dark);
@@ -71,6 +73,9 @@ img {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -6273,7 +6278,10 @@ textarea.enquiry-form-control {
   .nature-pill-eyebrow, 
   .green-eyebrow {
     font-size: 0.75rem !important;
-    padding: 4px 12px !important;
+    padding: 5px 12px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   /* 2. Mobile CTA Buttons: Single-Lined Text & Small Compact Size across All Pages */
