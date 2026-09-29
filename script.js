@@ -81,7 +81,7 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   const animatedCards = document.querySelectorAll('.fade-in-card');
   animatedCards.forEach(card => observer.observe(card));
 
@@ -120,25 +120,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const faqItems = document.querySelectorAll('.faq-accordion-item');
   faqItems.forEach(item => {
     const trigger = item.querySelector('.faq-trigger');
-    trigger.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      
-      // Close all other accordions
-      faqItems.forEach(i => {
-        i.classList.remove('active');
-        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
-      });
+    if (trigger) {
+      trigger.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other accordions
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          const t = i.querySelector('.faq-trigger');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
 
-      if (!isActive) {
-        item.classList.add('active');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
-    });
+        if (!isActive) {
+          item.classList.add('active');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
   });
 
   // Start Testimonial auto rotation
   startTestimonialAutoPlay();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 // Testimonial Carousel
 let testimonialIndex = 0;
