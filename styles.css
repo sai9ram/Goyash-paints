@@ -129,16 +129,28 @@ h1 {
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .hero-badges span {
-  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
   border-radius: 999px;
-  background: rgba(7, 17, 31, 0.04);
+  background: rgba(7, 17, 31, 0.05);
+  border: 1px solid rgba(7, 17, 31, 0.08);
   color: var(--text);
-  font-size: 0.92rem;
+  font-size: 0.78rem;
   font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero-badges span svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--secondary);
+  flex-shrink: 0;
 }
 
 .product-hero-section {
@@ -217,14 +229,15 @@ h1 {
 
 .hero-product-badge {
   align-self: flex-end;
-  padding: 6px 14px;
+  padding: 4px 10px;
   border-radius: 99px;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: white;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
 }
 
 .hero-product-img-wrap {
@@ -6278,10 +6291,21 @@ textarea.enquiry-form-control {
   .nature-pill-eyebrow, 
   .green-eyebrow {
     font-size: 0.75rem !important;
-    padding: 5px 12px !important;
+    padding: 4px 11px !important;
     white-space: nowrap !important;
     display: inline-flex !important;
     align-items: center !important;
+  }
+
+  .hero-badges span {
+    font-size: 0.72rem !important;
+    padding: 4px 9px !important;
+    gap: 4px !important;
+  }
+
+  .hero-badges span svg {
+    width: 12px !important;
+    height: 12px !important;
   }
 
   /* 2. Mobile CTA Buttons: Single-Lined Text & Small Compact Size across All Pages */
