@@ -5205,14 +5205,14 @@ textarea.enquiry-form-control {
 
 .float-btn-whatsapp {
   bottom: 84px;
-  left: 24px;
+  right: 24px;
   background-color: #25d366;
   color: #ffffff;
 }
 
 .float-btn-call {
   bottom: 24px;
-  left: 24px;
+  right: 24px;
   background: linear-gradient(135deg, #0b2d5c 0%, #1a4d8c 100%);
   color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.25);
@@ -5222,7 +5222,7 @@ textarea.enquiry-form-control {
 .float-btn::before {
   content: attr(data-label);
   position: absolute;
-  left: 64px;
+  right: 64px;
   top: 50%;
   transform: translateY(-50%) scale(0.9);
   background: rgba(7, 27, 55, 0.95);
@@ -5250,11 +5250,11 @@ textarea.enquiry-form-control {
   }
   .float-btn-whatsapp {
     bottom: 74px;
-    left: 16px;
+    right: 16px;
   }
   .float-btn-call {
     bottom: 16px;
-    left: 16px;
+    right: 16px;
   }
   .float-btn::before {
     display: none;
