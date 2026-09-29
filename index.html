@@ -94,27 +94,31 @@
 
     <div class="page-shell">
       <!-- Section 1 - Hero Banner (Page 1 PDF) -->
-      <section class="hero" id="home">
+      <!-- Section 1 - Brand & Product Showcase Hero (New Carousel Model) -->
+      <section class="hero product-hero-section" id="home">
         <div class="hero-content">
-          <p class="eyebrow">Inspired by Quality • Trusted Protection</p>
-          <h1>PREMIUM PAINT SOLUTIONS FOR BEAUTIFUL SPACES AND LASTING PROTECTION</h1>
+          <p class="eyebrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Inspired by Quality • Trusted Protection
+          </p>
+          <h1>NEXT-GENERATION PAINTS FOR LUXURY HOMES &amp; BUILDINGS</h1>
           <p class="hero-copy">
-            Transform and protect your spaces with Goyash Paints. Formulated with advanced technology, eco-friendly ingredients, and low VOC standards for superior performance, durability, and a rich, smooth finish.
+            Transform and protect your spaces with Goyash Paints. Formulated with advanced pure acrylic copolymers, low VOC standards, and anti-bacterial protection for brilliant colors and long-lasting durability.
           </p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="products.html">Explore Product Range</a>
-            <a class="btn btn-secondary" href="quote.html">Get a Free Quote</a>
+            <a class="btn btn-secondary" href="quote.html">Get Paint Estimate</a>
           </div>
 
           <div class="hero-badges" aria-label="Key Highlights">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Superior Protection
+              Anti-Bacterial Protection
             </span>
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              Rich &amp; Smooth Finish
+              100% Scrub Washable
             </span>
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7 7 0 0 1-9 10z"></path><path d="M9 22v-4"></path></svg>
@@ -124,28 +128,147 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"></path></svg>
               Water Based Technology
             </span>
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              Long Lasting Performance
-            </span>
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-              For Interior &amp; Exterior
-            </span>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Premium paint showcase">
-          <div class="visual-glow"></div>
-          <div class="image-frame">
-            <img class="hero-slide active" src="Hero image.jpeg?v=5" alt="Luxury Home Exterior with Goyash Paints" />
-            <img class="hero-slide" src="Hero image 2.jpeg?v=5" alt="Goyash Imperio Premium Living Room Finish" />
-            <img class="hero-slide" src="Hero image 3.jpeg?v=5" alt="Goyash Veloura Elegant Wall Coating" />
-            <img class="hero-slide" src="Hero Image1.jpeg?v=5" alt="Goyash Smart &amp; Shield Product Showcase" />
-            <img class="hero-slide" src="Hero Image 4.jpg?v=5" alt="Goyash Architectural &amp; Exterior Finish" />
-            <img class="hero-slide" src="Hero Image 5.jpg?v=5" alt="Goyash Premium Interior Wall Emulsion" />
+        <!-- Product Carousel Card Container -->
+        <div class="hero-carousel-wrapper" aria-label="Goyash Paint Product Showcase Carousel">
+          <div class="carousel-glow"></div>
+          
+          <!-- Prev / Next Control Arrows -->
+          <button type="button" class="carousel-nav-btn prev-btn" id="hero-prev-btn" aria-label="Previous Product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button type="button" class="carousel-nav-btn next-btn" id="hero-next-btn" aria-label="Next Product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <div class="product-carousel-frame">
+            
+            <!-- Slide 1: IMPERIO -->
+            <div class="hero-slide active" data-slide-index="0">
+              <div class="hero-product-card">
+                <div class="hero-product-badge luxury-badge">Super Luxury</div>
+                <div class="hero-product-img-wrap">
+                  <img src="Hero Image 4.jpg?v=6" alt="Goyash Imperio Luxury Paint Bucket" class="hero-product-img" />
+                </div>
+                <div class="hero-product-info">
+                  <span class="hero-product-category">LUXURY ALL SURFACE ACRYLIC EMULSION</span>
+                  <h3 class="hero-product-name">GOYASH IMPERIO</h3>
+                  <p class="hero-product-tagline">LUXURY. COMFORT. PERFECTION.</p>
+                  <div class="hero-product-specs">
+                    <span>Coverage: 130-150 sq.ft/L</span>
+                    <span>Sizes: 1L | 4L | 10L | 20L</span>
+                  </div>
+                  <a href="products.html#imperio" class="btn btn-primary btn-sm">Explore Imperio &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: VELOURA -->
+            <div class="hero-slide" data-slide-index="1">
+              <div class="hero-product-card">
+                <div class="hero-product-badge premium-badge">Interior &amp; Exterior</div>
+                <div class="hero-product-img-wrap">
+                  <img src="Hero Image 5.jpg?v=6" alt="Goyash Veloura Paint Bucket" class="hero-product-img" />
+                </div>
+                <div class="hero-product-info">
+                  <span class="hero-product-category">PREMIUM INTERIOR &amp; EXTERIOR EMULSION</span>
+                  <h3 class="hero-product-name">GOYASH VELOURA</h3>
+                  <p class="hero-product-tagline">BEAUTIFUL WALLS. BETTER LIFE</p>
+                  <div class="hero-product-specs">
+                    <span>Coverage: 120-140 sq.ft/L</span>
+                    <span>Sizes: 1L | 4L | 10L | 20L</span>
+                  </div>
+                  <a href="products.html#veloura" class="btn btn-primary btn-sm">Explore Veloura &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: SMART -->
+            <div class="hero-slide" data-slide-index="2">
+              <div class="hero-product-card">
+                <div class="hero-product-badge interior-badge">Interior Finish</div>
+                <div class="hero-product-img-wrap">
+                  <img src="Hero image.jpeg?v=6" alt="Goyash Smart Interior Emulsion" class="hero-product-img" />
+                </div>
+                <div class="hero-product-info">
+                  <span class="hero-product-category">INTERIOR ACRYLIC EMULSION</span>
+                  <h3 class="hero-product-name">GOYASH SMART</h3>
+                  <p class="hero-product-tagline">SMOOTH MATT. HIGH HIDING.</p>
+                  <div class="hero-product-specs">
+                    <span>Coverage: 120-140 sq.ft/L</span>
+                    <span>Sizes: 1L | 4L | 10L | 20L</span>
+                  </div>
+                  <a href="products.html#smart" class="btn btn-primary btn-sm">Explore Smart &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: SHIELD -->
+            <div class="hero-slide" data-slide-index="3">
+              <div class="hero-product-card">
+                <div class="hero-product-badge exterior-badge">Exterior Weather Shield</div>
+                <div class="hero-product-img-wrap">
+                  <img src="Hero Image1.jpeg?v=6" alt="Goyash Shield Exterior Emulsion" class="hero-product-img" />
+                </div>
+                <div class="hero-product-info">
+                  <span class="hero-product-category">ACRYLIC EXTERIOR EMULSION</span>
+                  <h3 class="hero-product-name">GOYASH SHIELD</h3>
+                  <p class="hero-product-tagline">PROTECTION THAT LASTS. BEAUTY THAT STAYS.</p>
+                  <div class="hero-product-specs">
+                    <span>Coverage: 80-100 sq.ft/L</span>
+                    <span>Sizes: 1L | 4L | 10L | 20L</span>
+                  </div>
+                  <a href="products.html#shield" class="btn btn-primary btn-sm">Explore Shield &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5: PRIMER WHITE -->
+            <div class="hero-slide" data-slide-index="4">
+              <div class="hero-product-card">
+                <div class="hero-product-badge primer-badge">Wall Primer</div>
+                <div class="hero-product-img-wrap">
+                  <img src="Product_image_only_white_background_202607101108.jpeg?v=6" alt="Goyash Acrylic Primer White" class="hero-product-img" />
+                </div>
+                <div class="hero-product-info">
+                  <span class="hero-product-category">WATER BASED ACRYLIC WALL PRIMER</span>
+                  <h3 class="hero-product-name">GOYASH ACRYLIC PRIMER</h3>
+                  <p class="hero-product-tagline">STRONG BASE. PERFECT FINISH.</p>
+                  <div class="hero-product-specs">
+                    <span>Coverage: 100-120 sq.ft/L</span>
+                    <span>Sizes: 1L | 4L | 10L | 20L</span>
+                  </div>
+                  <a href="products.html#primer" class="btn btn-primary btn-sm">Explore Primer &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6: ELITE -->
+            <div class="hero-slide" data-slide-index="5">
+              <div class="hero-product-card">
+                <div class="hero-product-badge distemper-badge">Distemper</div>
+                <div class="hero-product-img-wrap">
+                  <img src="pomelli_photoshoot_image_9_16_0710.png?v=6" alt="Goyash Elite Distemper" class="hero-product-img" />
+                </div>
+                <div class="hero-product-info">
+                  <span class="hero-product-category">ACRYLIC DISTEMPER FOR HOMES</span>
+                  <h3 class="hero-product-name">GOYASH ELITE</h3>
+                  <p class="hero-product-tagline">ECONOMICAL. SMOOTH MATT.</p>
+                  <div class="hero-product-specs">
+                    <span>Coverage: 80-100 sq.ft/L</span>
+                    <span>Sizes: 1L | 4L | 10L | 20L</span>
+                  </div>
+                  <a href="products.html#elite" class="btn btn-primary btn-sm">Explore Elite &rarr;</a>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="slide-dots" aria-label="Image slider controls"></div>
+
+          <!-- Slide Indicator Dots -->
+          <div class="slide-dots" aria-label="Product carousel slide indicators"></div>
         </div>
       </section>
 

@@ -38,12 +38,31 @@ function startAutoPlay() {
   }, 5000);
 }
 
+const prevBtn = document.getElementById('hero-prev-btn');
+const nextBtn = document.getElementById('hero-next-btn');
+
 if (slides.length > 0 && dotsContainer) {
   renderDots();
   showSlide(0);
   startAutoPlay();
-  window.addEventListener('mouseenter', () => clearInterval(intervalId));
-  window.addEventListener('mouseleave', startAutoPlay);
+  
+  const carouselWrapper = document.querySelector('.hero-carousel-wrapper') || window;
+  carouselWrapper.addEventListener('mouseenter', () => clearInterval(intervalId));
+  carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+}
+
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+    startAutoPlay();
+  });
+}
+
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+    startAutoPlay();
+  });
 }
 
 // Intersection Observer for scroll animations
