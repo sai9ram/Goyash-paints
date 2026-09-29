@@ -5037,3 +5037,147 @@ textarea.enquiry-form-control {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
 }
 
+/* ═══════════════════════════════════════════
+   VECTOR SVG ICON UTILITIES
+═══════════════════════════════════════════ */
+.svg-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.svg-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(46, 139, 87, 0.12);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.card-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+}
+
+.promise-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(11, 45, 92, 0.08);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.promise-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.hero-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-badges span svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--secondary);
+}
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-item svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--secondary);
+}
+
+.vm-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(46, 139, 87, 0.15);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.vm-icon-wrap svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+}
+
+.diff-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(11, 45, 92, 0.08);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.diff-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.nature-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(46, 139, 87, 0.2);
+  color: #2e8b57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nature-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: currentColor;
+}
+
+.product-bar-strip div {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-bar-strip svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--secondary);
+}
+
