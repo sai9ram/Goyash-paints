@@ -6771,29 +6771,26 @@ textarea.enquiry-form-control {
     text-align: center !important;
   }
 
-  .nav-btn-mobile {
+  .nav-menu li a.nav-btn-mobile,
+  .nav-menu li a.nav-btn-mobile:hover,
+  .nav-menu li a.nav-btn-mobile.active,
+  .nav-menu li a.nav-btn-mobile:visited {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 7px 18px !important;
+    padding: 8px 20px !important;
     border-radius: 999px !important;
     background: linear-gradient(135deg, #0B2D5C 0%, #071B37 100%) !important;
     color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
     font-weight: 700 !important;
-    font-size: 0.8rem !important;
+    font-size: 0.82rem !important;
     text-decoration: none !important;
-    box-shadow: 0 4px 12px rgba(11, 45, 92, 0.25) !important;
+    box-shadow: 0 4px 14px rgba(11, 45, 92, 0.3) !important;
     width: auto !important;
     max-width: max-content !important;
     margin: 0 auto !important;
     white-space: nowrap !important;
-  }
-
-  .nav-btn-mobile:hover,
-  .nav-btn-mobile.active {
-    background: linear-gradient(135deg, #071B37 0%, #0B2D5C 100%) !important;
-    color: #ffffff !important;
-    box-shadow: 0 6px 16px rgba(11, 45, 92, 0.35) !important;
   }
 }
 
